@@ -401,6 +401,40 @@ const fallbackPortfolio = [
     techStack: ['AI', 'Gemini', 'Python', 'API', 'Chatbot'],
     liveUrl: 'https://my-gemini-chatbot-bjuh.onrender.com/',
   },
+  {
+    id: 'chatbot-ai-new',
+    title: 'AI Chatbot',
+    category: 'chatbot',
+    categoryLabel: 'CHATBOT',
+    client: 'AI Chatbot Project',
+    tools: ['AI', 'Gemini', 'Node.js', 'Express', 'Chatbot'],
+    description: 'An AI-powered chatbot built with Node.js and Gemini API, featuring a mobile-first design and daily usage tracking.',
+    image: '/images/chatbot-new.jpg',
+    gallery: ['/images/chatbot-new.jpg'],
+    sales: 'Live Demo',
+    rate: '₹5,000',
+    price: '₹5,000',
+    finalResult: 'A mobile-first AI chatbot experience with daily usage limits and a clean chat interface.',
+    techStack: ['AI', 'Gemini', 'Node.js', 'Express', 'Chatbot'],
+    liveUrl: 'https://my-new-chatbot-81d5.onrender.com',
+  },
+  {
+    id: 'chatbot-ai-3',
+    title: 'AI Chatbot 3',
+    category: 'chatbot',
+    categoryLabel: 'CHATBOT',
+    client: 'AI Chatbot Project',
+    tools: ['AI', 'Gemini', 'Node.js', 'Express', 'Chatbot'],
+    description: 'Smarter conversations, better solutions. Get quick, accurate and helpful answers with this AI Chatbot powered by Gemini.',
+    image: '/images/chatbot-3.jpg',
+    gallery: ['/images/chatbot-3.jpg'],
+    sales: 'Live Demo',
+    rate: '₹5,000',
+    price: '₹5,000',
+    finalResult: 'An AI chatbot delivering instant answers with reliable, 24/7 support and smart conversation flows.',
+    techStack: ['AI', 'Gemini', 'Node.js', 'Express', 'Chatbot'],
+    liveUrl: 'https://my-chatbot-ctxv.onrender.com',
+  },
 ]
 
 const ensureRequiredProjects = (projects) => {
@@ -412,6 +446,8 @@ const ensureRequiredProjects = (projects) => {
     'website-nexus-hospital-management',
     'website-mobile-mart',
     'chatbot-ai-assistant',
+    'chatbot-ai-new',
+    'chatbot-ai-3',
     'poster-menu-card',
     'thumbnail-beauty',
     'thumbnail-image-1',
@@ -739,6 +775,7 @@ function PortfolioHome({
           <a href="#skills">Skills</a>
           <a href="#testimonials">Reviews</a>
           <a href="#contact">Contact</a>
+          <a href="#help-center">Help Center</a>
         </nav>
         <a className="nav-cta" href="#booking">Book a call</a>
       </header>
@@ -853,21 +890,21 @@ function PortfolioHome({
             {visiblePortfolio.map((project) => (
               <article
                 key={project.id || project.title}
-                className={`project-card ${project.id === 'chatbot-ai-assistant' ? 'chatbot-project-card' : ''}`}
+                className={`project-card ${project.id === 'chatbot-ai-assistant' || project.id === 'chatbot-ai-new' || project.id === 'chatbot-ai-3' ? 'chatbot-project-card' : ''}`}
               >
                 <button type="button" className="project-image-button" onClick={() => handleCardClick(project)} aria-label={`Preview ${project.title}`}>
                   <div className="project-image-wrap">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`project-image ${project.category === 'poster-design' ? 'poster-image' : ''}`}
+                      className={`project-image ${project.category === 'poster-design' ? 'poster-image' : ''} ${project.id === 'chatbot-ai-new' || project.id === 'chatbot-ai-3' ? 'chatbot-new-image' : ''}`}
                     />
                   </div>
                 </button>
 
                 <div className="card-topline">
                   <span>{project.categoryLabel}</span>
-                  {project.id === 'chatbot-ai-assistant' ? (
+                  {project.id === 'chatbot-ai-assistant' || project.id === 'chatbot-ai-new' || project.id === 'chatbot-ai-3' ? (
                     <span className="chatbot-live-badge">LIVE DEMO</span>
                   ) : (
                     <span className="chip" />
@@ -896,7 +933,7 @@ function PortfolioHome({
                   </div>
                 )}
                 <div className="project-links">
-                  {project.id === 'chatbot-ai-assistant' ? (
+                  {project.id === 'chatbot-ai-assistant' || project.id === 'chatbot-ai-new' || project.id === 'chatbot-ai-3' ? (
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -1151,6 +1188,53 @@ function PortfolioHome({
           <a className="secondary-btn" href="https://wa.me/7539913460" target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
       </footer>
+
+      <section id="help-center" className="help-center-section" aria-label="Help Center">
+        <div className="help-center-card">
+          <div className="help-center-main">
+            <div className="help-center-icon-wrap" aria-hidden="true">
+              <svg
+                className="help-center-icon"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                <path d="M12 8v4" />
+                <path d="M12 16h.01" />
+              </svg>
+            </div>
+            <div className="help-center-info">
+              <div className="help-center-badge-row">
+                <span className="help-center-badge">
+                  <span className="help-center-dot" aria-hidden="true" />
+                  AI Assistant
+                </span>
+              </div>
+              <h2 className="help-center-title">Help Center</h2>
+              <p className="help-center-description">
+                Have questions about my portfolio, projects, skills, or freelance services? Ask my AI assistant for help.
+              </p>
+            </div>
+          </div>
+          <div className="help-center-actions">
+            <a
+              className="primary-btn help-center-button"
+              href="https://my-new-chatbot-81d5.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ask Me Anything
+              <span className="help-btn-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <div className="footer-bottom">
         <div className="brand-block">

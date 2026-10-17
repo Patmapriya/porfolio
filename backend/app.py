@@ -320,6 +320,30 @@ def get_portfolio():
             'techStack': ['AI', 'Gemini', 'Python', 'API', 'Chatbot'],
             'liveUrl': 'https://my-gemini-chatbot-bjuh.onrender.com/',
         },
+        {
+            'id': 'chatbot-ai-new',
+            'title': 'AI Chatbot',
+            'category': 'chatbot',
+            'categoryLabel': 'CHATBOT',
+            'description': 'An AI-powered chatbot built with Node.js and Gemini API, featuring a mobile-first design and daily usage tracking.',
+            'image': '/images/chatbot-new.jpg',
+            'sales': 'Live Demo',
+            'rate': '₹5,000',
+            'techStack': ['AI', 'Gemini', 'Node.js', 'Express', 'Chatbot'],
+            'liveUrl': 'https://my-new-chatbot-81d5.onrender.com',
+        },
+        {
+            'id': 'chatbot-ai-3',
+            'title': 'AI Chatbot 3',
+            'category': 'chatbot',
+            'categoryLabel': 'CHATBOT',
+            'description': 'Smarter conversations, better solutions. Get quick, accurate and helpful answers with this AI Chatbot powered by Gemini.',
+            'image': '/images/chatbot-3.jpg',
+            'sales': 'Live Demo',
+            'rate': '₹5,000',
+            'techStack': ['AI', 'Gemini', 'Node.js', 'Express', 'Chatbot'],
+            'liveUrl': 'https://my-chatbot-ctxv.onrender.com',
+        },
     ]
 
 

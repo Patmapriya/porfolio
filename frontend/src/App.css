@@ -14,6 +14,7 @@
 .about-section,
 .booking-section,
 .contact-footer,
+.help-center-section,
 .footer-bottom {
   width: min(100%, 1120px);
   margin: 0 auto;
@@ -520,6 +521,11 @@
 .project-image.poster-image {
   object-fit: contain;
   padding: 10px;
+}
+
+.project-image.chatbot-new-image {
+  object-fit: contain;
+  background: #0d1117;
 }
 
 .card-topline {
@@ -1041,6 +1047,132 @@
   color: #f5f7fb;
 }
 
+/* Help Center Section */
+.help-center-section {
+  scroll-margin-top: 50px;
+  margin-top: 36px;
+}
+
+.help-center-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 30px 36px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(20, 22, 31, 0.95), rgba(15, 17, 24, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.3), 0 0 30px rgba(196, 139, 255, 0.05);
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+  overflow: hidden;
+}
+
+.help-center-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 159, 255, 0.35);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.4), 0 0 36px rgba(196, 139, 255, 0.14);
+}
+
+.help-center-main {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.help-center-icon-wrap {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(245, 208, 151, 0.18), rgba(201, 159, 255, 0.22));
+  border: 1px solid rgba(210, 183, 255, 0.3);
+  color: #f5d097;
+  box-shadow: 0 8px 24px rgba(196, 139, 255, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.help-center-card:hover .help-center-icon-wrap {
+  transform: scale(1.06) rotate(3deg);
+}
+
+.help-center-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.help-center-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.help-center-badge-row {
+  margin-bottom: 6px;
+}
+
+.help-center-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(143, 231, 211, 0.08);
+  border: 1px solid rgba(143, 231, 211, 0.26);
+  color: #8fe7d3;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.help-center-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #8fe7d3;
+  box-shadow: 0 0 8px #8fe7d3;
+}
+
+.help-center-title {
+  margin: 0 0 6px;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #f5f7fb;
+}
+
+.help-center-description {
+  margin: 0;
+  color: rgba(220, 224, 232, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 580px;
+}
+
+.help-center-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.help-center-button {
+  gap: 8px;
+  white-space: nowrap;
+  padding: 0.95rem 1.6rem;
+  font-size: 0.96rem;
+}
+
+.help-btn-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.help-center-button:hover .help-btn-arrow {
+  transform: translateX(4px);
+}
+
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -1357,6 +1489,21 @@
   .contact-footer {
     display: flex;
   }
+
+  .help-center-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 28px 24px;
+  }
+
+  .help-center-actions {
+    width: 100%;
+  }
+
+  .help-center-button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 620px) {
@@ -1394,6 +1541,12 @@
 
   .filter-btn {
     flex: 1 1 auto;
+  }
+
+  .help-center-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
 }
 
